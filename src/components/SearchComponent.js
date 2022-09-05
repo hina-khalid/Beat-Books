@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import styles from "../stylesheet/styles.css";
-import logo from "../../logo.png"
+import logo from "../../assets/logo.png"
 
 function SearchComponent() {
     const [bookName, setBookName] = useState('');
@@ -17,20 +17,20 @@ function SearchComponent() {
     };
 
     return (
-        <div class="outsideOfForm">
-            <div class="form">
-                <div class="header">
+        <div className="outsideOfForm">
+            <div className="form">
+                <div className="header">
                     <img src={logo} width={'50%'} />
                 </div>
-                <b><label class="label">Book Name</label></b>
-                <input type='text' value={bookName} onChange={handleBookName} class="userInput" />
+                <b><label className="label">Book Name</label></b>
+                <input type='text' value={bookName} onChange={handleBookName} className="userInput" />
                 <br />
-                <b><label class="label"> Author </label></b>
-                <input type='text' value={author} onChange={handleAuthor} class="userInput" />
+                <b><label className="label"> Author </label></b>
+                <input type='text' value={author} onChange={handleAuthor} className="userInput" />
                 <br />
-                <button onClick={() => navigate("/loading")} class="submitButton">Submit</button>
+                <button onClick={() => navigate("/loading")} className="submitButton">Submit</button>
             </div >
-        </div>
+        </div >
     )
 }
 
